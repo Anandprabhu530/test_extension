@@ -1,8 +1,8 @@
 const article = document.querySelector("article");
 
+// `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {
   const text = article.textContent;
-  console.log(text);
   const wordMatchRegExp = /[^\s]+/g; // Regular expression
   const words = text.matchAll(wordMatchRegExp);
   // matchAll returns an iterator, convert to array to get word count
